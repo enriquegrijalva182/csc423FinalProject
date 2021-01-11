@@ -1,0 +1,54 @@
+CREATE TABLE student (
+stuID NUMBER,
+stuName VARCHAR2(50 CHAR) NOT NULL,
+stuPhone NUMBER,
+stuEmail VARCHAR2(50 CHAR),
+street VARCHAR2(50 CHAR),
+city VARCHAR2(50 CHAR),
+zipCode NUMBER,
+CONSTRAINT student_pk PRIMARY KEY(stuID)
+);
+
+CREATE TABLE tutor (
+tutorID NUMBER,
+tutorName VARCHAR2(50 CHAR) NOT NULL,
+tutorPhone NUMBER,
+tutorEmail VARCHAR2(50 CHAR),
+street VARCHAR2(50 CHAR),
+city VARCHAR2(50 CHAR),
+zipCode NUMBER,
+CONSTRAINT tutor_pk PRIMARY KEY(tutorID)
+);
+
+CREATE TABLE course (
+crsNum NUMBER,
+tutorID NUMBER,
+crsName VARCHAR2(50 CHAR) NOT NULL,
+crsDescription VARCHAR2(100 CHAR) NOT NULL,
+crsFees NUMBER DEFAULT 0,
+crsSeats NUMBER DEFAULT 0,
+CONSTRAINT course_pk PRIMARY KEY(crsNum),
+CONSTRAINT course_fk FOREIGN KEY(tutorID) REFERENCES tutor(tutorID)
+);
+
+CREATE TABLE schedule (
+scheduleID NUMBER,
+crsNum NUMBER,
+begMonth VARCHAR2(50 CHAR) NOT NULL,
+endMonth VARCHAR2(50 CHAR) NOT NULL,
+schDay VARCHAR@(50 CHAR),
+shift VARCHAR2(50 CHAR),
+weekNum NUMBER, 
+CONSTRAINT schedule_pk PRIMARY KEY(scheduleID),
+CONSTRAINT schedule_fk FOREIGN KEY(crsNum) REFERENCES course(crsNum)
+);
+
+CREATE TABLE enrollment(
+enrollNum NUMBER,
+scheduleID NUMBER,
+stuID NUMBER,
+enrollDate DATE,
+CONSTRAINT enrollment_pk PRIMARY KEY(enrollNum),
+CONSTRAINT enrollment_FK1 FOREIGN KEY(scheduleID) REFERENCES schedule(scheduleID),
+CONSTRAINT enrollment_FK2 FOREIGN KEY(stuID) REFERENCES student(stuID)
+);\
