@@ -1,0 +1,74 @@
+INSERT INTO student
+VALUES(01, 'Mario Sanchez', 7863051122, 'mario.sanchez@archimedean.org', '9426 SW 31 AVE', 'Miami', 33145);
+
+INSERT INTO student
+VALUES(02, 'Enrique Grijalva', 7866575503, 'enrique.grijalva@archimedean.org', '15166 SW 94th Ter', 'Miami', 33196);
+
+INSERT INTO student
+VALUES(03, 'Javier Esparza', 7869871322, 'javier.esparza@archimedean.org', '3298 NW 100 st', 'Miami', 33147);
+
+INSERT INTO student
+VALUES(04, 'Farhat Samara', 3057891231, 'farhat.samara@archimedean.org', '89211 SW 36 AVE', 'Miami', 33190);
+
+INSERT INTO student
+VALUES(05, 'Franko Gonzalez', 7866170206, 'franko.gonzalez@archimedean.org', '987 SW 37th AVE', 'Miami', 33145);
+
+INSERT INTO tutor
+VALUES(001, 'Javier Urtecho', 7863058351, 'javier.urtecho@archimedean.org', '9342 SW 11 ST', 'Miami', 33165);
+
+INSERT INTO tutor
+VALUES(002, 'Javier Quintanilla', 7867631254, 'javier.quintanilla@archimedean.org', '90208 SW 365 ST', 'Miami', 33125);
+
+INSERT INTO tutor
+VALUES(003, 'Byron Espinoza', 7868393921, 'byron.espinoza@archimedean.org', '23312 SW 33 ST', 'Miami', 33165);
+
+INSERT INTO tutor
+VALUES(004, 'Lesbia Loaisiga', 3056127221, 'lesbia.loaisiga@archimedean.org', '12345 SW 111 ST', 'Miami', 33186);
+
+INSERT INTO tutor
+VALUES(005, 'Perla Cano', 3056166221, 'perla.cano@archimedean.org', '9122 NW 112 ST', 'Miami', 33155);
+
+INSERT INTO course
+VALUES(0001, 001, 'Physical Education', 'Improve health of students', 300,50);
+
+INSERT INTO course
+VALUES(0002, 002, 'Volleyball', 'Practice the sport of volleyball', 600,30);
+
+INSERT INTO course
+VALUES(0003, 003, 'Computer Hardware', 'Repair of hardware of computers from 2002 to 2014', 1200,20);
+
+INSERT INTO course
+VALUES(0004, 004, 'Microsoft Oficce', 'Usage of the Microsoft suit platfoirms', 800,15);
+
+INSERT INTO course
+VALUES(0005, 005, 'International Business', 'How to perfrom business internationally', 3000,100);
+
+INSERT INTO schedule
+VALUES(1,0001,'August','December', 'Wednesdays', 'Mornings', 12);
+
+INSERT INTO schedule
+VALUES(2,0002,'August','December', 'Thursdays', 'Mornings', 12);
+
+INSERT INTO schedule
+VALUES(3,0003,'January','April', 'Wednesdays', 'Evening', 12);
+
+INSERT INTO schedule
+VALUES(4,0001,'August','October', 'Wednesdays', 'Night', 8);
+
+INSERT INTO schedule
+VALUES(5,0005,'January','February', 'Friday', 'Night', 5);
+
+INSERT INTO enrollment
+VALUES(10200, 1, 01, TO_DATE('2021-01-05', 'yyyy-mm-dd'));
+
+INSERT INTO enrollment
+VALUES(10201, 3, 04, TO_DATE('2021-01-05', 'yyyy-mm-dd'));
+
+INSERT INTO enrollment
+VALUES(10199, 5, 05, TO_DATE('2021-01-04', 'yyyy-mm-dd'));
+
+INSERT INTO enrollment
+VALUES(10203, 2, 03, TO_DATE('2021-01-06', 'yyyy-mm-dd'));
+
+INSERT INTO enrollment
+VALUES(10202, 5, 05, TO_DATE('2021-01-05', 'yyyy-mm-dd'));
